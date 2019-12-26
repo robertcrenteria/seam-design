@@ -1,0 +1,55 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  background: #1a1a1f;
+  color: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+}
+
+.content {
+  grid-column: col-start 4 / span 6;
+  grid-row: 6;
+}
+
+/*Typography*/
+
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #f98664;
+  display: inline-block;
+  position: relative;
+  padding-right: 50px;
+}
+h1:after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: white;
+  transform: rotate(-45deg); /* Equal to rotateZ(45deg) */
+}
+
+h2 {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-weight: 400;
+}
