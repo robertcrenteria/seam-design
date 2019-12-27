@@ -25,6 +25,12 @@ body {
   grid-column: col-start 4 / span 6;
   grid-row: 6;
 }
+@media only screen and (max-width: 600px) {
+  .content {
+    grid-column: col-start 2 / span 10;
+    grid-row: 6;
+  }
+}
 
 /*Typography*/
 
@@ -34,7 +40,8 @@ h1 {
   color: #f98664;
   display: inline-block;
   position: relative;
-  padding-right: 50px;
+  padding-right: 40px;
+  margin-bottom: 20px;
 }
 h1:after {
   content: "";
@@ -52,4 +59,19 @@ h2 {
   font-size: 1.2rem;
   line-height: 2.2rem;
   font-weight: 400;
+  margin-bottom: 40px;
+}
+
+a {
+  display: inline-block;
+  background: rgba(248, 212, 115, 1);
+  color: #1a1a1f;
+  border-radius: 100px;
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+a:hover {
+  background: rgba(248, 212, 115, 0.9);
 }
